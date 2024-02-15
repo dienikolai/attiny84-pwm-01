@@ -8,7 +8,7 @@
  *    soweit von mir steht das Ganze unter GPL-Lizenz
  *    geschrieben mit Arduino 1.8.19
  *    bei Arduino 2.2.1 wird kein Programmer gefunden
- *    empirisch
+ *    
  */
 
 
@@ -18,12 +18,12 @@
 #define baum_pin 8
 #define grund_pin 7
 #define test_pin  4
-#define motorread_pin 3
-#define baumread_pin 2
-#define grundread_pin 1
-#define loop_baum 9
-#define loop_grund 10
-#define zeit_pin 5
+#define motorread_pin 3    //PA3
+#define baumread_pin 2    //PA2
+#define grundread_pin 1  //PA1
+#define loop_baum 9   // S2
+#define loop_grund 10   // S1
+#define zeit_pin 5    // S3
 bool test = false;
 bool zeit = true;
 bool timer_on = false;
@@ -169,6 +169,7 @@ void setup() {
      TCCR0A = _BV(COM0A1) | _BV(WGM00) | _BV(WGM01);  // | _BV(WGM10)
      TCCR0B = _BV(CS01) | _BV(WGM02); 
   -----------------------------------------------------------------------------
+  sind alle ausprobiert
   */
 }
 
