@@ -1,7 +1,7 @@
 /*   Neue Weihnachtsbaumsteuerung
  *    by Dietmar Nikolai
  *    E-Mail:  dietmar-nikolai@t-online.de
- *    Version 1.0 von 20.01.2024
+ *    Version 1.0 von 15.02.2024
  *    Grundidee und Kit von AZ-Delivery
  *      AZDelivery DIY LED Weihnachtsbaum Kit: Weihnachtsbaum Elektronik Bausatz zum Löten - 
  *      Lötbausatz für einen drehenden Weihnachtsbaum mit LEDs und USB-Anschluss
@@ -38,6 +38,7 @@ int baumzaehlerindex = 0;
 int loop_index[] = {1,2,3,4,5,6};
 long yy = 0;
 unsigned long s0 = 0,s1 = 21600,s2 = 64800,s3 = 93600,s4 = 172760, xx = 0;  // zeitaufteilung für 24 Stunden, 172800 halbe Sekunden - 20s = 40 delay-ausgleich
+// 0 -an 3h - 4h aus -4h an - aus bis 24h gesamt
 //unsigned long s0 = 0,s1 = 21600,s2 = 22200,s3 = 22800,s4 = 172800, xx = 21000;    // Timertest
 
 void ausgabe_loopbaum(){
